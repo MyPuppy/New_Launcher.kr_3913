@@ -328,14 +328,43 @@ namespace ExcData
                             oPacket.WriteShort(i);
                             oPacket.WriteShort(KartSN);
                             oPacket.WriteInt(4);
-                            oPacket.WriteShort(43);
-                            oPacket.WriteShort(23);
-                            oPacket.WriteShort(44);
-                            oPacket.WriteShort(2);
-                            oPacket.WriteShort(45);
-                            oPacket.WriteShort(23);
-                            oPacket.WriteShort(46);
-                            oPacket.WriteShort(1);
+                            if (i == 597 || i == 662 || i == 663 || i == 664 || i == 770 || i == 772 || i == 773 || i == 843 || i == 852 || i == 853 ||
+                                i == 856 || i == 858 || i == 866 || i == 868 || i == 873 || i == 878 || i == 882 || i == 885 || i == 878 || i == 882 ||
+                                i == 885 || i == 887 || i == 889 || i == 901 || i == 906 || i == 907 || i == 916 || i == 917 || i == 922 || i == 931 ||
+                                i == 940 || i == 942 || i == 949 || i == 950 || i == 951 || i == 954 || i == 971 || i == 999 || i == 1003 || i == 1005 ||
+                                i == 1008)
+                            {
+                                oPacket.WriteShort(43);
+                                oPacket.WriteShort(22);
+                                oPacket.WriteShort(44);
+                                oPacket.WriteShort(3);
+                                oPacket.WriteShort(45);
+                                oPacket.WriteShort(3);
+                                oPacket.WriteShort(46);
+                                oPacket.WriteShort(3);
+                            }
+                            else if (i == 795)
+                            {
+                                oPacket.WriteShort(43);
+                                oPacket.WriteShort(6);
+                                oPacket.WriteShort(44);
+                                oPacket.WriteShort(5);
+                                oPacket.WriteShort(45);
+                                oPacket.WriteShort(3);
+                                oPacket.WriteShort(46);
+                                oPacket.WriteShort(2);
+                            }
+                            else
+                            {
+                                oPacket.WriteShort(43);
+                                oPacket.WriteShort(23);
+                                oPacket.WriteShort(44);
+                                oPacket.WriteShort(2);
+                                oPacket.WriteShort(45);
+                                oPacket.WriteShort(23);
+                                oPacket.WriteShort(46);
+                                oPacket.WriteShort(1);
+                            }
                         }
                     }
                     oPacket.WriteInt(0);
