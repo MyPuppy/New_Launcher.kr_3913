@@ -93,10 +93,35 @@ namespace RiderData
                 {
                     if (Program.UseKartPlant)
                     {
-                        oPacket.WriteShort(23);
-                        oPacket.WriteShort(23);
-                        oPacket.WriteShort(2);
-                        oPacket.WriteShort(1);
+                        if (SetRiderItem.Set_Kart == 597 || SetRiderItem.Set_Kart == 662 || SetRiderItem.Set_Kart == 663 || SetRiderItem.Set_Kart == 664 || SetRiderItem.Set_Kart == 770 ||
+                            SetRiderItem.Set_Kart == 772 || SetRiderItem.Set_Kart == 773 || SetRiderItem.Set_Kart == 843 || SetRiderItem.Set_Kart == 852 || SetRiderItem.Set_Kart == 853 ||
+                            SetRiderItem.Set_Kart == 856 || SetRiderItem.Set_Kart == 858 || SetRiderItem.Set_Kart == 866 || SetRiderItem.Set_Kart == 868 || SetRiderItem.Set_Kart == 873 ||
+                            SetRiderItem.Set_Kart == 878 || SetRiderItem.Set_Kart == 882 || SetRiderItem.Set_Kart == 885 || SetRiderItem.Set_Kart == 878 || SetRiderItem.Set_Kart == 882 ||
+                            SetRiderItem.Set_Kart == 885 || SetRiderItem.Set_Kart == 887 || SetRiderItem.Set_Kart == 889 || SetRiderItem.Set_Kart == 901 || SetRiderItem.Set_Kart == 906 ||
+                            SetRiderItem.Set_Kart == 907 || SetRiderItem.Set_Kart == 916 || SetRiderItem.Set_Kart == 917 || SetRiderItem.Set_Kart == 922 || SetRiderItem.Set_Kart == 931 ||
+                            SetRiderItem.Set_Kart == 940 || SetRiderItem.Set_Kart == 942 || SetRiderItem.Set_Kart == 949 || SetRiderItem.Set_Kart == 950 || SetRiderItem.Set_Kart == 951 ||
+                            SetRiderItem.Set_Kart == 954 || SetRiderItem.Set_Kart == 971 || SetRiderItem.Set_Kart == 999 || SetRiderItem.Set_Kart == 1003 || SetRiderItem.Set_Kart == 1005 ||
+                            SetRiderItem.Set_Kart == 1008)
+                        {
+                            oPacket.WriteShort(22);
+                            oPacket.WriteShort(3);
+                            oPacket.WriteShort(3);
+                            oPacket.WriteShort(3);
+                        }
+                        else if (SetRiderItem.Set_Kart == 795)
+                        {
+                            oPacket.WriteShort(6);
+                            oPacket.WriteShort(3);
+                            oPacket.WriteShort(5);
+                            oPacket.WriteShort(2);
+                        }
+                        else
+                        {
+                            oPacket.WriteShort(23);
+                            oPacket.WriteShort(2);
+                            oPacket.WriteShort(23);
+                            oPacket.WriteShort(1);
+                        }
                     }
                     else
                     {
